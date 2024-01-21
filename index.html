@@ -35,7 +35,7 @@
 
         <div id="main_input_container">
 
-          <form action="#" method="post">
+          <form onsubmit="return checkpassword(this)" method="post">
 
             <fieldset id="form_fieldset">
 
@@ -74,10 +74,13 @@
                 <div class="single_input_container">
                   <label for="password">PASSWORD</label>
                   <input type="password" id="password">
+                  <span class="alert" id="password_empty" style="display: none;">Please enter password</span>
+                  <span class="alert" id="password_mismatch" style="display: none;">Passwords do not match</span>
                 </div>
                 <div class="single_input_container">
                   <label for="password_confirm">CONFIRM PASSWORD</label>
                   <input type="password" id="password_confirm">
+                  <span class="alert" id="password_confirm_empty" style="display: none;">Please enter confirm password</span>
                 </div>
 
               </div>

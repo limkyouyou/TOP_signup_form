@@ -118,7 +118,7 @@ body {
 }
 
 #form_fieldset {
-
+  height: 250px;
   margin: 0;
   border: 0;
   padding: 0;
@@ -215,4 +215,8 @@ input:invalid {
 
 #login_link:hover {
   text-decoration: underline;
+}
+
+.alert {
+  color: rgb(243, 59, 59);
 }
