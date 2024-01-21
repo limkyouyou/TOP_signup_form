@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
   
@@ -18,53 +19,77 @@
           <span id="logo_title">ODIN</span>
         </div>
         <div id="img_credit">
-          <span>Photo by <u>Halie West</u> on <u>Unsplash</u></span>
+          <span>Photo by <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Halie West</a> on <a href="https://unsplash.com/">Unsplash</a></span>
         </div>
       </div>
 
       <div id="form_container">
 
         <div id="quote_container">
-          <p>
+          <p id="quote">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin accumsan odio, ut suscipit arcu hendrerit in. 
             Curabitur facilisis eu erat non lacinia. Pellentesque ut. 
-            <pre>- Marcus Aurelius</pre>
+            <pre id="quote_author">- Marcus Aurelius</pre>
           </p>
         </div>
 
-        <div id="form_container">
+        <div id="main_input_container">
 
           <form action="#" method="post">
 
-            <h2>Let's get it started!</h2>
+            <fieldset id="form_fieldset">
 
-            <fieldset>
-              <div id="name_container">
-                <label for="first_name">FIRST NAME</label>
-                <input type="text" id="first_name">
-                <label for="last_name">LAST NAME</label>
-                <input type="text" id="last_name">
+              <span id="form_message">Let's get it started!</span>
+
+              <div class="input_type_container" id="name_container">
+
+                <div class="single_input_container">
+                  <label for="first_name">FIRST NAME</label>
+                  <input type="text" id="first_name">
+                </div>
+
+                <div class="single_input_container">
+                  <label for="last_name">LAST NAME</label>
+                  <input type="text" id="last_name">
+                </div>
+
               </div>
-              <div id="contact_container">
-                <label for="email">EMAIL</label>
-                <input type="email" id="email">
-                <label for="phone_number">PHONE NUMBER</label>
-                <input type="number" id="phone_number">
+
+              <div class="input_type_container" id="contact_container">
+
+                <div class="single_input_container">
+                  <label for="email">EMAIL</label>
+                  <input type="email" id="email">
+                </div>
+
+                <div class="single_input_container">
+                  <label for="phone_number">PHONE NUMBER</label>
+                  <input type="tel" id="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                </div>
+
               </div>
-              <div id="password_container">
-                <label for="password">PASSWORD</label>
-                <input type="password" id="password">
-                <label for="password_confirm">CONFIRM PASSWORD</label>
-                <input type="password" id="password_confirm">
+
+              <div class="input_type_container" id="password_container">
+
+                <div class="single_input_container">
+                  <label for="password">PASSWORD</label>
+                  <input type="password" id="password">
+                </div>
+                <div class="single_input_container">
+                  <label for="password_confirm">CONFIRM PASSWORD</label>
+                  <input type="password" id="password_confirm">
+                </div>
+
               </div>
+
             </fieldset>
 
-            <div id="submit_btn_conainer">
+            <div id="submit_btn_container">
               <button type="submit">Create Account</button>
             </div>
 
             <div id="exist_account_container">
-              <p>Already have an account?<a id="login_link" href="#">Log in</a></p>
+              <p>Already have an account? <a id="login_link" href="#">Log in</a></p>
             </div>
 
           </form>

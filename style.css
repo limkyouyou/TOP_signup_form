@@ -4,7 +4,13 @@
 }
 
 html {
+  --label-font-size: 0.25rem;
+  --form-container-width: 811px;
+  --form-padding-left: 40px;
+  --green-tone: #596D48;
+
   height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
 }
 
@@ -76,13 +82,137 @@ body {
   display: flex;
   justify-content: center;
 
-  font-family: sans-serif;
   font-size: .25rem;
   color: white;
 }
 
-#form_container {
-  width: 811px;  
+#img_credit a {
+  color: white;
+}
 
+#img_credit a:visited {
+  color: white;
+}
+
+#form_container {
+  width: var(--form-container-width);  
+
+  background-color: rgb(249, 249, 249);
+}
+
+#quote_container {
+  position: relative;
+  top: 70px;
+  padding: 40px 40px 0px var(--form-padding-left);
+
+  font-size: 0.5rem;
+  font-weight: bold;
+
+}
+
+
+#main_input_container {
+  position: relative;
+  top: 90px;
+
+}
+
+#form_fieldset {
+
+  margin: 0;
+  border: 0;
+  padding: 0;
+  
+  padding-left: var(--form-padding-left);
+  
   background-color: white;
+  box-shadow: 0px 5px 13px -5px rgb(190, 190, 190);
+  
+}
+
+#form_message {
+  font-size: 0.55rem;
+  
+}
+
+.input_type_container {
+
+  margin-top: 18px;
+
+  display: flex;
+
+  font-size: var(--label-font-size);
+
+}
+
+.single_input_container {
+  width:230px;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.single_input_container + .single_input_container {
+  margin-left: 60px;
+}
+
+.input_type_container:last-child {
+  margin-bottom: 30px;
+}
+
+label {
+  margin-bottom: 3px;
+}
+
+input {
+  height: 22px;
+  border: 1px solid rgb(216, 215, 215);
+  border-radius: 3px;
+  background-color: rgb(254, 254, 254);
+}
+
+input:invalid {
+  border: 1px solid red;
+  box-shadow: 0px 0px 1px 0px red;
+}
+
+#submit_btn_container {
+  padding: 15px 0px 0px var(--form-padding-left);
+}
+
+#submit_btn_container button {
+
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 40px 10px 40px;
+
+  font-size: 0.37rem;
+  font-weight: bold;
+  color: white;
+
+  background-color: var(--green-tone);
+  box-shadow: 1px 1px 3px 1px rgb(168, 168, 168);
+}
+
+#submit_btn_container button:hover {
+  box-shadow: 0px 0px 9px 1px rgb(87, 87, 87) inset;
+  cursor: pointer;
+}
+
+#exist_account_container {
+  padding: 15px 0px 0px var(--form-padding-left);
+
+  font-size: 0.38rem;
+
+}
+
+#login_link {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--green-tone);
+}
+
+#login_link:hover {
+  text-decoration: underline;
 }
